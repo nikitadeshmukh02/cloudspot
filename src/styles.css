@@ -1,0 +1,239 @@
+body {
+font-family: 'Open Sans', sans-serif;
+margin: 0 auto;
+width:80%;
+  
+background-image: url(../assets/background1.jpg);
+}
+ /* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+     
+li {
+display:block;
+padding: 10px 20px 20px 20px;
+
+}
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+ .verticalLine {
+  border-left: thick solid navy;
+}
+ 
+ 
+li {
+display:inline;
+padding: 10px 20px 20px 20px;
+
+}
+nav a:link, nav a:visited {
+ 
+color:navy;
+  font: bold;
+ 
+}
+nav a:hover {
+background-color:lightcyan;
+}
+ 
+aside {
+width:50%;
+float:right;
+ 
+text-align:center;
+font-weight:bold;
+padding:20px;
+margin-left:20px;
+}
+.photo-left {
+float:left;
+margin-right:20px;
+}
+.photo-right {
+float:right;
+margin-left:20px;
+}
+header {
+background-color:lightcyan;
+height:150px;
+
+ 
+}
+ h1 {
+color:rgba(256,256,256,.8);
+margin-left:30px;
+margin-top:0px;
+font-size:40px;
+}
+ h5 {
+color:navy;
+margin-left:0px;
+margin-top:0px;
+font-size:30px;
+}
+footer {
+margin: 40px 0;
+background-color: navy;
+
+}
+footer nav a:link, footer nav a:visited {
+color:gray;
+text-decoration:none;
+display:block;
+width:160px;
+text-align:center;
+background-color:white;
+}
+footer nav a:hover {
+color:black;
+}
+td, th {
+border:1px solid black;
+width:20%;
+text-align:center;
+padding:5px;
+}
+table {
+border-collapse:collapse;
+}
+video {
+margin-bottom: 20px;
+margin-left: 160px;
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+filter: grayscale(100%);
+}

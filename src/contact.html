@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Cloud Spot</title>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 10px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+</style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="javascript">
+
+
+    / Now you can just call
+var ctx = document.getElementById("rounded-rect").getContext("2d");
+// Draw using default border radius, 
+// stroke it but no fill (function's default values)
+roundRect(ctx, 5, 5, 50, 50);
+// To change the color on the rectangle, just manipulate the context
+ctx.strokeStyle = "rgb(255, 0, 0)";
+ctx.fillStyle = "rgba(255, 255, 0, .5)";
+roundRect(ctx, 100, 5, 100, 100, 20, true);
+// Manipulate it again
+ctx.strokeStyle = "#0f0";
+ctx.fillStyle = "#ddd";
+ 
+/**
+ * Draws a rounded rectangle using the current state of the canvas.
+ * If you omit the last three params, it will draw a rectangle
+ * outline with a 5 pixel border radius
+ * @param {CanvasRenderingContext2D} ctx
+ * @param {Number} x The top left x coordinate
+ * @param {Number} y The top left y coordinate
+ * @param {Number} width The width of the rectangle
+ * @param {Number} height The height of the rectangle
+ * @param {Number} [radius = 5] The corner radius; It can also be an object 
+ *                 to specify different radii for corners
+ * @param {Number} [radius.tl = 0] Top left
+ * @param {Number} [radius.tr = 0] Top right
+ * @param {Number} [radius.br = 0] Bottom right
+ * @param {Number} [radius.bl = 0] Bottom left
+ * @param {Boolean} [fill = false] Whether to fill the rectangle.
+ * @param {Boolean} [stroke = true] Whether to stroke the rectangle.
+ */
+function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
+  if (typeof stroke == 'undefined') {
+    stroke = true;
+  }
+  if (typeof radius === 'undefined') {
+    radius = 5;
+  }
+  if (typeof radius === 'number') {
+    radius = {tl: radius, tr: radius, br: radius, bl: radius};
+  } else {
+    var defaultRadius = {tl: 0, tr: 0, br: 0, bl: 0};
+    for (var side in defaultRadius) {
+      radius[side] = radius[side] || defaultRadius[side];
+    }
+  }
+  ctx.beginPath();
+  ctx.moveTo(x + radius.tl, y);
+  ctx.lineTo(x + width - radius.tr, y);
+  ctx.quadraticCurveTo(x + width, y, x + width, y + radius.tr);
+  ctx.lineTo(x + width, y + height - radius.br);
+  ctx.quadraticCurveTo(x + width, y + height, x + width - radius.br, y + height);
+  ctx.lineTo(x + radius.bl, y + height);
+  ctx.quadraticCurveTo(x, y + height, x, y + height - radius.bl);
+  ctx.lineTo(x, y + radius.tl);
+  ctx.quadraticCurveTo(x, y, x + radius.tl, y);
+  ctx.closePath();
+  if (fill) {
+    ctx.fill();
+  }
+  if (stroke) {
+    ctx.stroke();
+  }
+
+}
+</script>
+<script
+
+ 
+
+type="text/javascript">
+
+ 
+
+var LPAWS = {};
+
+// Initialize the Amazon Cognito credentials provider
+
+AWS.config.region = 'us-east-1'; // Region
+
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+
+    IdentityPoolId: 'us-east-1:f2883798-1c7d-47d0-8c9d-f3e40090e54a',
+
+});
+
+ 
+
+LPAWS.sendToTopic =
+
+function()
+
+{
+
+var sns =
+
+new AWS.SNS();
+
+var params = {
+
+//Message: 'Hello topic', /* required */ Message:
+
+document.querySelector('#input-msg').value,
+
+ 
+
+Subject:
+
+'CloudSpot Contact Form',
+
+TopicArn:
+
+'arn:aws:sns:us-east-1:181000361206:CloudSpot-contact-form' };
+
+ 
+
+sns.publish(params,
+
+function(err, data)
+
+{
+
+if (err)
+
+console.log(err, err.stack);
+
+// an error occurred
+
+else
+
+console.log(data);
+
+// successful response }); }; </script>
+</head>
+
+<body>
+ <header>
+
+<div  class="row" style="width:100%">
+     
+<div class="col-sm-6">     
+
+<img src="../assets/touch screen cloud.jpg" height="150px" width="50%"></img>
+      
+</div>
+ 
+<div class="col-sm-6">     
+<canvas id="rounded-rect" width="50%" height="100">
+  <!-- Insert fallback content here -->
+</canvas>
+<nav>
+ <ul>
+ <li><a href="../index.html"> HOME  </a></li>
+<li><a href="about.html"> ABOUT  </a></li>
+<li><a href="services.html"> SERVICES  </a></li>
+<li><a href="contact.html"> CONTACT </a></li>
+
+</ul>
+    </nav>  
+</div>
+</div>
+ 
+</header>
+<section style="background-color:grey;width:100%">
+<h1>Cloud Spot Solutions</h1>
+    
+</section>
+<section>
+
+<aside>
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h5>Or allow us contact you</h5>
+    <fieldset>
+      <input placeholder="Name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Company Name" type="text" tabindex="1" required autofocus>
+      
+    </fieldset>
+    <fieldset>
+      <input placeholder="Email" type="email" tabindex="2" required>
+     
+    </fieldset>
+    <fieldset>
+         <input placeholder="Phone Number" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Message" tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit"  onclick="LPAWS.sendToTopic(); return false;" data-submit="...Sending">Submit</button>
+    </fieldset>
+  
+  </form>
+</div>
+</aside>
+ 
+<section>
+ 
+   <p align="left"> Contact us </p> 
+<p align="left">
+<a href="">info@cloudspotssolutions.com</a>
+</p>
+<p align="left">
+(347) 915-5909
+</p>
+
+
+<img src="../assets/globalnetwork.jpg"></img>
+
+</section>
+</section>
+
+<section style="width:100%;margin-top:100px">
+ 
+</section>
+<footer>
+<span style="color:white;padding-left:20px;">info@cloudspotsolutions.com    </span>
+<span style="color:white;padding-left:100px;">(347) 915-5909    </span>
+ 
+
+
+</footer>
+</body>
+</html>
